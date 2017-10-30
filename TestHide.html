@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>			
+			Test Hide
+		</title>
+		<style>
+			nav{
+				background-color:green;
+				color:red;
+			}
+
+			a:link{
+				color:yellow;
+			}
+
+			a:visited{
+				color: yellow;
+
+			}
+
+			a:hover{
+				color:yellow;
+			}
+		</style>
+
+		<script>
+			function hideImg(x) {
+			document.getElementById(x).style.visibility="hidden";
+
+			setTimeout (function() { getImg (x)}, 3000);
+
+			}
+
+			function getImg(x) {
+				document.getElementById(x).src = "https://www.gannett-cdn.com/-mm-/2b7a91094f7f933500a9681ff15e337b8cbede95/c=188-0-3173-2244&r=x404&c=534x401/local/-/media/2017/03/23/USATODAY/USATODAY/636258509999670186-GettyImages-598825938.jpg";
+				document.getElementById(x).style.visibility="visible";
+			}
+		</script>
+	</head>
+	<body style="background-color:red;color:yellow;font-size:30px;font-weight:bolder;">
+		<div style="background-color:red;color:green;
+					margin:30px;padding:15px;
+					border-radius:25px;text-align:center;">
+			<nav>
+					<a href="index.html">
+						Home
+					</a>
+				<a href="aboutme.html" />
+					About Me
+				</a>
+
+				<a href="Projects.html">
+					Projects
+				</a>
+
+				<a href="clickable.html">
+					Clickable
+				</a>	
+
+			</nav> 
+			<section>
+			<img id="img1" src="https://images1.phoenixnewtimes.com/imager/u/original/7519761/4479671776_591c82e060_o.jpg" onclick="hideImg('img1');">
+			<img id="img2" src="http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg" onclick="hideImg('img2');">
+
+
+			</section> 
+		</div>
+	</body>
+</html>
