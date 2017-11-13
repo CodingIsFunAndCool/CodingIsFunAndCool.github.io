@@ -1,6 +1,12 @@
 <html>
 	<head>
 		<title>Clickable</title>
+
+		<script>
+			function clickMe(){
+				document.getElementById("circle").innerHTML = "Hello!";
+			}
+		</script>
 	</head>
 	<body> 
 
@@ -18,11 +24,14 @@
 				Projects
 			</a>
 		</nav>
+
 		<section>
-		<br>
+		<div id="circle" style="color:green;height:100px;width:100px;background-color:black;
+			border-radius:50px;position:relative;top:100px;left:100px; padding-left:50px;	"></div>
+			<br>
 		<img style="width:350px;" src="https://www.what-dog.net/Images/faces2/scroll0015.jpg">
 			Name: <input type="text">
-			<input type="button" value="Click Me!">
+			<input type="button" value="Click Me!" onclick="clickMe();" />
 		</section>
 		<section >
 
