@@ -4,8 +4,15 @@
 
 		<script>
 			function clickMe(){
-				document.getElementById("circle").innerHTML = "Hello!";
+				var name = document.getElementById("nameText").value;
+				document.getElementById("circle").innerHTML = "Hello,  " + name + "!";
 			}
+
+			function clickMe2(){
+				var name = document.getElementById("Square").value;
+				document.getElementById("Circle").innerHTML = "Hello, " + name + "!";
+			}
+		</script>
 		</script>
 	</head>
 	<body> 
@@ -28,16 +35,22 @@
 		<section>
 		<div id="circle" style="color:green;height:100px;width:100px;background-color:black;
 			border-radius:50px;position:relative;top:100px;left:100px; padding-left:50px;	"></div>
+
+			<div id="Square" style="color:green;height:100px;width:100px;background-color:black;
+			border-radius:50px;position:relative;top:100px;left:50px; padding-left:50px;	"></div>
 			<br>
 		<img style="width:350px;" src="https://www.what-dog.net/Images/faces2/scroll0015.jpg">
-			Name: <input type="text">
+			Name: <input type="text" id="nameText" value="" />
 			<input type="button" value="Click Me!" onclick="clickMe();" />
+
+			Circle: <input type="text" id="Square" value="" />
+			<input type="button" value="ClickMe!" onclick="clickMe2();" />
 		</section>
 		<section >
 
 		</section>
 		<section >
-			
+
 		</section>
 	</body>
 </html>
